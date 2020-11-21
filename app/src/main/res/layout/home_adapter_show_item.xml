@@ -17,10 +17,12 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        android:maxLines="2"
+        android:ellipsize="end"
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_medium"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
         app:layout_constraintBottom_toTopOf="@+id/caption"
         app:layout_constraintEnd_toEndOf="parent"

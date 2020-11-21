@@ -7,12 +7,14 @@ import com.ovrbach.tv4challenge.model.dto.HomeResponse
 import com.ovrbach.tv4challenge.model.util.Outcome
 import javax.inject.Inject
 
-class ShowRemoteSourceImpl  @Inject constructor(
+class ShowRemoteSourceImpl @Inject constructor(
     private val remoteService: ShowRemoteService,
     private val errorHandler: ErrorHandler
 ) : ShowRemoteSource {
 
-    override suspend fun getHomeItems(): HomeResponse = remoteService.getHomeItems()
+    override suspend fun getHomeItems(): Outcome<HomeResponse> = request {
+        remoteService.getHomeItems()
+    }
 
     private suspend fun <T> request(request: suspend () -> T): Outcome<T> = try {
         Outcome.Success(request())

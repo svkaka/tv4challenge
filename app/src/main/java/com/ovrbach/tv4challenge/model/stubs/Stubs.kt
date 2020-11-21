@@ -1,7 +1,7 @@
-package com.ovrbach.tv4challenge.data.stubs
+package com.ovrbach.tv4challenge.model.stubs
 
-import com.ovrbach.tv4challenge.data.ui.CategoryItem
-import com.ovrbach.tv4challenge.data.ui.ShowItem
+import com.ovrbach.tv4challenge.model.ui.CategoryItem
+import com.ovrbach.tv4challenge.model.ui.ShowItem
 
 object Stubs {
 
@@ -53,6 +53,7 @@ object Stubs {
         image = "https://img-cdn.b17g.net/7bcce57b-6332-4629-9a7f-6741c29e27ce/100.jpg",
         description = "V75 Direkt",
     )
+    val shows = listOf(show1, show2, show3, show4, show5, show6, show7)
 
     val categoryA = CategoryItem(
         name = "hockeylördag-med-shl",

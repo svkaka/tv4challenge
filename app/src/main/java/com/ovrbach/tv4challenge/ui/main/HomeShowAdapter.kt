@@ -6,28 +6,28 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.ovrbach.tv4challenge.data.ui.ShowItem
-import com.ovrbach.tv4challenge.databinding.HomeAdapterCategoryShowItemBinding
+import com.ovrbach.tv4challenge.model.ui.ShowItem
+import com.ovrbach.tv4challenge.databinding.HomeAdapterShowItemBinding
 
-class HomeCategoryShowAdapter(sharedViewPool: RecyclerView.RecycledViewPool) : ListAdapter<ShowItem, HomeCategoryShowAdapter.ViewHolder>(
+class HomeShowAdapter() : ListAdapter<ShowItem, HomeShowAdapter.ViewHolder>(
         object : DiffUtil.ItemCallback<ShowItem>() {
             override fun areItemsTheSame(oldItem: ShowItem, newItem: ShowItem): Boolean =
                     oldItem.id == newItem.id
 
             override fun areContentsTheSame(oldItem: ShowItem, newItem: ShowItem): Boolean =
                     oldItem == newItem
-
         }
 ) {
 
     class ViewHolder(
-            private val binding: HomeAdapterCategoryShowItemBinding
+            private val binding: HomeAdapterShowItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ShowItem) {
             with(binding){
                 image.load(item.image)
                 title.text = item.title
+                description.text = item.description
             }
         }
 
@@ -35,7 +35,7 @@ class HomeCategoryShowAdapter(sharedViewPool: RecyclerView.RecycledViewPool) : L
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
             LayoutInflater.from(parent.context).let { inflater ->
-                HomeAdapterCategoryShowItemBinding.inflate(inflater, parent, false)
+                HomeAdapterShowItemBinding.inflate(inflater, parent, false)
             }
     )
 

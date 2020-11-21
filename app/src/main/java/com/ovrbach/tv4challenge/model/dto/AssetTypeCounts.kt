@@ -1,4 +1,4 @@
-package com.ovrbach.tv4challenge.data.dto
+package com.ovrbach.tv4challenge.model.dto
 
 data class AssetTypeCounts (
 	val clip : Int,

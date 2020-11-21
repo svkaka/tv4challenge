@@ -1,4 +1,4 @@
-package com.ovrbach.tv4challenge.data.ui
+package com.ovrbach.tv4challenge.model.ui
 
 
 data class CategoryItem(

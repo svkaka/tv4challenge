@@ -1,8 +1,8 @@
-package com.ovrbach.tv4challenge.data.ui
+package com.ovrbach.tv4challenge.model.ui
 
 data class ShowItem(
         val id: Long,
-        val title: String,
+        val title: String, //name (episode num)
         val image: String,
         val description: String
 )

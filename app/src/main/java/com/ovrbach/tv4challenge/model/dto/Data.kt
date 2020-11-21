@@ -1,4 +1,4 @@
-package com.ovrbach.tv4challenge.data.dto
+package com.ovrbach.tv4challenge.model.dto
 
 data class Data (
     val allow_embed : Boolean,
@@ -13,7 +13,7 @@ data class Data (
     val encoder_group_id : Int,
     val episode : Int,
     val hide_ads : Boolean,
-    val id : Int,
+    val id : Long,
     val image : String,
     val is_clip : Boolean,
     val is_drm_protected : Boolean,
@@ -30,5 +30,5 @@ data class Data (
     val start_over : Boolean,
     val tags : List<Int>,
     val title : String,
-    val type : String
+    val type : String //episode
 )

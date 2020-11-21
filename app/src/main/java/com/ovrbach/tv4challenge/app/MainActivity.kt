@@ -1,9 +1,12 @@
-package com.ovrbach.tv4challenge
+package com.ovrbach.tv4challenge.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ovrbach.tv4challenge.ui.main.HomeFragment
+import com.ovrbach.tv4challenge.R
+import com.ovrbach.tv4challenge.feature.home.HomeFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

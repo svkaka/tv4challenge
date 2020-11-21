@@ -14,7 +14,7 @@ data class Data (
     val episode : Int,
     val hide_ads : Boolean,
     val id : Long,
-    val image : String,
+    val image : String?,
     val is_clip : Boolean,
     val is_drm_protected : Boolean,
     val is_geo_restricted : Boolean,
@@ -28,7 +28,7 @@ data class Data (
     val season : Int,
     val show_logo : Boolean,
     val start_over : Boolean,
-    val tags : List<Int>,
+    val tags : List<String>,
     val title : String,
     val type : String //episode
 )

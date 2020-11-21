@@ -8,11 +8,10 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.memory.MemoryCache
-import com.ovrbach.tv4challenge.R
-import com.ovrbach.tv4challenge.model.ui.ShowItem
 import com.ovrbach.tv4challenge.databinding.HomeAdapterShowItemBinding
+import com.ovrbach.tv4challenge.model.ui.ShowItem
 
-class HomeShowAdapter() : ListAdapter<ShowItem, HomeShowAdapter.ViewHolder>(
+class HomeShowAdapter : ListAdapter<ShowItem, HomeShowAdapter.ViewHolder>(
     object : DiffUtil.ItemCallback<ShowItem>() {
         override fun areItemsTheSame(oldItem: ShowItem, newItem: ShowItem): Boolean =
             oldItem.id == newItem.id

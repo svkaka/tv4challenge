@@ -34,7 +34,7 @@ class RemoteModule {
         .build()
 
     @Provides
-    fun provideAlbumService(apiRetrofit: Retrofit): ShowRemoteService =
+    fun provideShowService(apiRetrofit: Retrofit): ShowRemoteService =
         apiRetrofit.create(ShowRemoteService::class.java)
 
     @Provides

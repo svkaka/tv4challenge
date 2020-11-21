@@ -8,7 +8,7 @@ data class Data (
     val content_api_id : Int,
     val content_api_season_id : Int,
     val content_api_series_id : Int,
-    val description : String,
+    val description : String?,
     val duration : Int,
     val encoder_group_id : Int,
     val episode : Int,

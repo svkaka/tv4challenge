@@ -1,9 +1,7 @@
-package com.ovrbach.tv4challenge.app.core
+package com.ovrbach.tv4challenge.core
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.snackbar.Snackbar
@@ -11,7 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 abstract class BaseViewFragment<B : ViewBinding>(layoutRes: Int) : Fragment(layoutRes) {
 
     private var snackBar: Snackbar? = null
-    var binding: B? = null
+    protected var binding: B? = null
 
     abstract fun bindView(view: View): B
 
@@ -50,7 +48,7 @@ abstract class BaseViewFragment<B : ViewBinding>(layoutRes: Int) : Fragment(layo
         }
     }
 
-    protected fun dismissSnackbar() {
+    private fun dismissSnackbar() {
         snackBar?.dismiss()
         snackBar = null
     }

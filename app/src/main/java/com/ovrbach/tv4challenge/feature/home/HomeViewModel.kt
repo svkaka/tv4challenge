@@ -22,9 +22,9 @@ class HomeViewModel @ViewModelInject constructor(
 
     private suspend fun refreshShows() {
         isLoading.postValue(true)
-        val state = loadShowsUseCase.loadShows()
+        val newState = loadShowsUseCase.loadShows()
         isLoading.postValue(false)
-        this.state.postValue(state)
+        state.postValue(newState)
     }
 
     fun reloadShows() {

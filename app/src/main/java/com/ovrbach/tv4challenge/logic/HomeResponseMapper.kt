@@ -22,12 +22,12 @@ class HomeResponseMapper @Inject constructor(
                 image = data.image?.let { image -> imageProxyUrlBuilder.homeImage(image) }
                     ?: DEFAULT_URL,
                 body = data.description,
-            ).also { println("ITEM: $it") }
+            )
         }
 
     //could be episode name formatter
     private fun produceEpisodeName(season: Int, episode: Int) = if (season != -1 && episode != -1) {
-        String.format("S%02d:E%02d", season, episode) //todo ingore when -1
+        String.format("S%02d:E%02d", season, episode) // ignore when -1
     } else {
         null
     }

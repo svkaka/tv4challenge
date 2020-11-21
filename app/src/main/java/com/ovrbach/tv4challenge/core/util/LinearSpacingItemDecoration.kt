@@ -1,4 +1,4 @@
-package com.ovrbach.tv4challenge.util
+package com.ovrbach.tv4challenge.core.util
 
 import android.graphics.Rect
 import android.view.View

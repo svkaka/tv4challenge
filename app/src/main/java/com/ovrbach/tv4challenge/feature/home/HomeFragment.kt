@@ -34,7 +34,7 @@ class HomeFragment : BaseViewFragment<HomeFragmentBinding>(R.layout.home_fragmen
                 is LoadShowsUseCase.State.Failed -> buildErrorSnackbar(
                     state.throwable.message!!,
                     "Retry"
-                ) { viewModel.reloadShows() }
+                ) { viewModel.reloadShows() }.show()
                 is LoadShowsUseCase.State.Success -> homeAdapter.submitList(state.shows)
             }
         })

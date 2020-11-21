@@ -5,5 +5,5 @@ data class ShowItem(
         val title: String,
         val caption: String?,
         val image: String,
-        val body: String
+        val body: String?
 )

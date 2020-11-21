@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.memory.MemoryCache
+import com.ovrbach.tv4challenge.R
 import com.ovrbach.tv4challenge.model.ui.ShowItem
 import com.ovrbach.tv4challenge.databinding.HomeAdapterShowItemBinding
 
@@ -26,7 +28,9 @@ class HomeShowAdapter() : ListAdapter<ShowItem, HomeShowAdapter.ViewHolder>(
 
         fun bind(item: ShowItem) {
             with(binding) {
-                image.load(item.image)
+                image.load(item.image) {
+                    placeholderMemoryCacheKey(MemoryCache.Key.invoke(item.id.toString()))
+                }
                 title.text = item.title
                 caption.text = item.caption
                 body.text = item.body
